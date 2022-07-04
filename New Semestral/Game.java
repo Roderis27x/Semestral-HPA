@@ -36,18 +36,26 @@ public class Game {
         //GameStatus = 0: Salir de juego
         //GameStatus = 1: Turno del jugador 1 (Caballo Blanco)
         //GameStatus = 2: Turno del jugaador 2 (Caballo Negro)
+        System.out.println("\n\t\t\t*******************************");
+        System.out.println("\t\t\t* Juego de Ajedrez (Caballos) *");
+        System.out.println("\t\t\t*******************************");
 
         while(gameStatus != 0){ 
 
             if(gameStatus == 1){ 
 
-                System.out.println("El turno del jugador: " + turn); //Se muestra el turno del jugador
+                System.out.println("\nEs el turno del jugador: " + turn); //Se muestra el turno del jugador
                 board.PrintBoard(); //Se imprime el tablero
 
-                System.out.println("Turno del Caballo Blanco: Mover o Salir..."); //Se muestra el turno del jugador
-                System.out.println("La posicion es: " + caballoBlanco.posc); //Se muestra la posicion del caballo
+                System.out.println("Turno del Caballo Blanco."); //Se muestra el turno del jugador
+                System.out.println("La posicion actual es: " + caballoBlanco.posc); //Se muestra la posicion del caballo
+                System.out.println(""); //Se imprime un espacio en blanco
+                System.out.println("Escribir Mover para la siguiente posicion"); 
+                System.out.println("Escribir salir para terminar el juego"); //Se muestra el mensaje de mover
+                
                 try {
 
+                    System.out.print("\nOpcion: "); //Se pide la siguiente posicion del caballo
                     action = read.nextLine(); //Se lee la accion del jugador
 
                 } catch (Exception e) {
