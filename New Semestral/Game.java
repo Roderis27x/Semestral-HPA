@@ -18,8 +18,8 @@ public class Game {
 
         board = new Board();
 
-        board.move(6, 0, caballoNegro);
-        board.move(1, 7, caballoBlanco);
+        board.move(caballoNegro, 0, 6);
+        board.move(caballoBlanco, 7, 1);
 
 
     } //Fin de PrepareGame
@@ -41,11 +41,11 @@ public class Game {
 
             if(gameStatus == 1){ 
 
-                System.out.print("El turno del jugador: " + turn); //Se muestra el turno del jugador
+                System.out.println("El turno del jugador: " + turn); //Se muestra el turno del jugador
                 board.PrintBoard(); //Se imprime el tablero
 
-                System.out.print("Turno del Caballo Blanco: Mover o Salir..."); //Se muestra el turno del jugador
-                System.out.print("La posicion es: " + caballoBlanco.posc); //Se muestra la posicion del caballo
+                System.out.println("Turno del Caballo Blanco: Mover o Salir..."); //Se muestra el turno del jugador
+                System.out.println("La posicion es: " + caballoBlanco.posc); //Se muestra la posicion del caballo
                 try {
 
                     action = read.nextLine(); //Se lee la accion del jugador
@@ -61,7 +61,7 @@ public class Game {
                     System.out.print("Ingrese la siguiente posicion: "); //Se muestra el mensaje de ingreso de la siguiente posicion
                     move = read.nextLine(); //Se lee la siguiente posicion del jugador
                     
-                    board.Entrada(caballoBlanco, move); //Se realiza el movimiento del caballo
+                    board.Entrada(move, caballoBlanco); //Se realiza el movimiento del caballo
 
                     if(caballoBlanco.posc.equals(caballoNegro.posc)){
                         ganador(caballoBlanco, "Caballo Blanco"); //Se imprime el mensaje de ganador
@@ -102,7 +102,7 @@ public class Game {
                     System.out.print("Ingrese la siguiente posicion: ");
                     move = read.nextLine();
 
-                    board.Entrada(caballoNegro, move); //Se realiza el movimiento del caballo
+                    board.Entrada(move, caballoNegro); //Se realiza el movimiento del caballo
 
                     if (caballoBlanco.posc.equals(caballoNegro.posc)){ //Si la posicion del caballo es igual a la posicion del caballo rival
 

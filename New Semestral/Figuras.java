@@ -10,10 +10,10 @@ public class Figuras {
     public Figuras(int x, int y, char color, String posc, String nombre) {
 
         this.ax = x; //Asigna la posicion inicial en x
-        this.ay = y; //Asigna la posicion inicial en y
+        this.ay = y;
+        this.color = color;
+        this.posc = posc; //Asigna la posicion inicial en y
         this.nombre = nombre; //Asigna el nombre del caballo
-        this.posc = posc; //Asigna la posicion inicial 
-        this.color = color; //Asigna el color del caballo
         posicion.add(posc); //Agrega la posicion inicial a la lista de registro
 
     }//Fin del constructor Caballos
