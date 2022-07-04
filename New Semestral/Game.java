@@ -56,10 +56,13 @@ public class Game {
 
                 }
 
-                if(action.equals("mover") || (action.equals("Mover") || action.equals("MOVER") )){
+                if(action.equals("mover") || action.equals("Mover") || action.equals("MOVER") ){
 
                     System.out.print("Ingrese la siguiente posicion: "); //Se muestra el mensaje de ingreso de la siguiente posicion
                     move = read.nextLine(); //Se lee la siguiente posicion del jugador
+                    
+                    board.Entrada(caballoBlanco, move); //Se realiza el movimiento del caballo
+
                     if(caballoBlanco.posc.equals(caballoNegro.posc)){
                         ganador(caballoBlanco, "Caballo Blanco"); //Se imprime el mensaje de ganador
                         gameStatus = 0; //Se cambia el estado del juego a 0
@@ -90,32 +93,46 @@ public class Game {
                     action = read.nextLine();
 
                 } catch (Exception e) {
-                    
+
                     System.out.println("Error... Ingrese una accion valida"); //Se muestra el error
                 }
-            }
+
+                if(action.equals("mover") || action.equals("Mover") || action.equals("MOVER") ){
+
+                    System.out.print("Ingrese la siguiente posicion: ");
+                    move = read.nextLine();
+
+                    board.Entrada(caballoNegro, move); //Se realiza el movimiento del caballo
+
+                    if (caballoBlanco.posc.equals(caballoNegro.posc)){ //Si la posicion del caballo es igual a la posicion del caballo rival
+
+                        ganador(caballoBlanco, "Caballo Blanco"); //Se imprime el mensaje de ganador
+                        gameStatus = 0; //Se cambia el estado del juego a 0
+                    
+                    }
+
+                    gameStatus = 1;
+                    turn++; 
+
+
+                }
+                else if(action.equals("salir") || (action.equals("Salir") || action.equals("SALIR") )){
+                    
+                    ganador(caballoBlanco, "Caballo Blanco"); //Se imprime el mensaje de ganador
+                    gameStatus = 0; //Se cambia el estado del juego a 0
+
+                }
+                else{
+
+                    System.out.println("Error... Ingrese una accion valida"); //Se muestra el error
+
+                } //Fin del else
+
                 
-               
-        
-
-
-
-
+            } //Fin del else
+                
         } //Fin While
-
-
-
-
-
-
-
 
     } //Fin de GameStart 
 
-
-    
-
-
-
-
-}
+} //Fin de la clase Game

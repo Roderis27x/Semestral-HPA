@@ -21,11 +21,13 @@ public class Board {
         System.out.print("   a   b   c   d   e   f   g   h   "); //Imprime la letra de las columnas
         for (int fila1 = 0; fila1 < 8; fila1++){
 
+            System.out.print(""); //Imprime una linea en blanco
             System.out.println("-----------------------------------");
             System.out.print(fila1 -8); //Imprime el numero de fila
             
             for (int col1 = 0; col1 < 8; col1++){
-                
+
+               
                 System.out.print(" | " + board[fila1][col1] + "  "); //Imprime el tablero
                 
             } //Fin del for col
