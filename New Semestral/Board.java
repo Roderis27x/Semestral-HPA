@@ -32,6 +32,7 @@ public class Board {
             System.out.print("||");
         }
         System.out.println("");
+        System.out.println("===================================================");
         System.out.println("     A      B     C     D     E     F     G     H   ");
 
     } // Fin del metodo PrintTablero

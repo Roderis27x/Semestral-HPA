@@ -14,7 +14,7 @@ public class Game {
         gameStatus = 1;
         turn = 1;
         caballoNegro = new Figuras(0, 6, 'N', "G8", "CN" );
-        caballoBlanco = new Figuras(7, 1, 'B', "A1", "CB" );
+        caballoBlanco = new Figuras(7, 1, 'B', "B1", "CB" );
 
         board = new Board();
 
