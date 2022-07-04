@@ -47,7 +47,7 @@ public class Game {
                 System.out.println("\nEs el turno del jugador: " + turn); //Se muestra el turno del jugador
                 board.PrintBoard(); //Se imprime el tablero
 
-                System.out.println("Turno del Caballo Blanco."); //Se muestra el turno del jugador
+                System.out.println("\nTurno del Caballo Blanco."); //Se muestra el turno del jugador
                 System.out.println("La posicion actual es: " + caballoBlanco.posc); //Se muestra la posicion del caballo
                 System.out.println(""); //Se imprime un espacio en blanco
                 System.out.println("Escribir Mover para la siguiente posicion"); 
@@ -93,11 +93,14 @@ public class Game {
             } //Fin del if
             else{ 
                 
-                System.out.print("Turno del Caballo Negro: Mover o Salir...");
-                System.out.print("La posicion es: " + caballoNegro);
+                System.out.print("Turno del Caballo Negro.");
+                System.out.println("La posicion actual es: " + caballoNegro);
+                System.out.println();
+                System.out.println("Escribir mover para la siguiente posicion");
+                System.out.println("Escribir salir para terminar el juego");
 
                 try {
-
+                    System.out.print("\nOpcion: ");
                     action = read.nextLine();
 
                 } catch (Exception e) {
